@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASAMH - Play. Compete. Discover.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ASAMH
+    </div>
+
+    <nav>
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('games')">Games</button>
+        <button onclick="scrollToSection('categories')">Categories</button>
+        <button onclick="scrollToSection('leaderboard')">Leaderboard</button>
+    </nav>
+
+    <div class="right-menu">
+
+        <input
+            id="search"
+            type="text"
+            placeholder="Search games..."
+        >
+
+        <button onclick="showFavorites()">♥</button>
+
+        <button onclick="openLogin()">Sign in</button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO ASAMH
+        </p>
+
+        <h1>
+            PLAY.
+            <br>
+            COMPETE.
+            <br>
+            DISCOVER.
+        </h1>
+
+        <p class="hero-description">
+            Discover exciting games, compete with players
+            and climb the ASAMH leaderboards.
+        </p>
+
+        <button
+            class="play-button"
+            onclick="openGame('Color Rush')"
+        >
+            ▶ Play now
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- GAMES -->
+
+<section id="games" class="section">
+
+    <div class="section-title">
+
+        <div>
+            <p class="small-title">DISCOVER</p>
+
+            <h2>
+                Featured Games
+            </h2>
+        </div>
+
+        <button
+            class="small-button"
+            onclick="showAllGames()"
+        >
+            View all
+        </button>
+
+    </div>
+
+
+    <div id="gameGrid" class="game-grid"></div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section id="categories" class="section">
+
+    <p class="small-title">
+        EXPLORE
+    </p>
+
+    <h2>
+        Categories
+    </h2>
+
+    <div class="category-grid">
+
+        <button onclick="category('Action')">
+            ⚔️
+            <span>Action</span>
+        </button>
+
+        <button onclick="category('Racing')">
+            🏎️
+            <span>Racing</span>
+        </button>
+
+        <button onclick="category('Sports')">
+            ⚽
+            <span>Sports</span>
+        </button>
+
+        <button onclick="category('Puzzle')">
+            🧩
+            <span>Puzzle</span>
+        </button>
+
+        <button onclick="category('Adventure')">
+            🗺️
+            <span>Adventure</span>
+        </button>
+
+        <button onclick="category('Arcade')">
+            🕹️
+            <span>Arcade</span>
+        </button>
+
+        <button onclick="category('Multiplayer')">
+            👥
+            <span>Multiplayer</span>
+        </button>
+
+        <button onclick="category('.io')">
+            🌐
+            <span>.io Games</span>
+        </button>
+
+        <button onclick="category('Strategy')">
+            ♟️
+            <span>Strategy</span>
+        </button>
+
+        <button onclick="category('Kids')">
+            ⭐
+            <span>Kids</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- LEADERBOARD -->
+
+<section id="leaderboard" class="section">
+
+    <p class="small-title">
+        COMPETE
+    </p>
+
+    <h2>
+        Weekly Leaderboard
+    </h2>
+
+    <div class="leaderboard-box">
+
+        <div class="player">
+            <div>
+                <strong>🥇 ASAMH Player</strong>
+                <small>Color Rush</small>
+            </div>
+
+            <strong>8,420</strong>
+
+            <span>
+                🏆 Weekly badge
+            </span>
+        </div>
+
+
+        <div class="player">
+
+            <div>
+                <strong>🥈 SpeedKing</strong>
+                <small>Speed Rush</small>
+            </div>
+
+            <strong>7,950</strong>
+
+            <span>
+                ⭐ 250 points
+            </span>
+
+        </div>
+
+
+        <div class="player">
+
+            <div>
+                <strong>🥉 PixelPro</strong>
+                <small>Block Drop</small>
+            </div>
+
+            <strong>7,610</strong>
+
+            <span>
+                ⭐ 150 points
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEMBERSHIPS -->
+
+<section class="section">
+
+    <p class="small-title">
+        MEMBERSHIP
+    </p>
+
+    <h2>
+        Choose your ASAMH plan
+    </h2>
+
+
+    <div class="plans">
+
+
+        <div class="plan">
+
+            <h3>
+                Free
+            </h3>
+
+            <div class="price">
+                €0
+                <small>/month</small>
+            </div>
+
+            <p>
+                Released games, favorites,
+                scores and achievements.
+            </p>
+
+            <button class="plan-button">
+                Current plan
+            </button>
+
+        </div>
+
+
+
+        <div class="plan">
+
+            <h3>
+                Medium
+            </h3>
+
+            <div class="price">
+                €2
+                <small>/month</small>
+            </div>
+
+            <p>
+                Extra games, selected early
+                access and more profile features.
+            </p>
+
+            <button
+                class="plan-button"
+                onclick="membership('Medium')"
+            >
+                Choose Medium
+            </button>
+
+        </div>
+
+
+
+        <div class="plan premium">
+
+            <div class="popular">
+                POPULAR
+            </div>
+
+            <h3>
+                All Inclusive
+            </h3>
+
+            <div class="price">
+                €4
+                <small>/month</small>
+            </div>
+
+            <p>
+                Premium games, exclusive content,
+                early access and premium badge.
+            </p>
+
+            <button
+                class="play-button"
+                onclick="membership('All Inclusive')"
+            >
+                Choose All Inclusive
+            </button>
+
+        </div>
+
+    </div>
+
+    <p class="demo">
+        Demo memberships — no real payments are connected.
+    </p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>ASAMH</strong>
+        <p>
+            Play. Compete. Discover.
+        </p>
+    </div>
+
+    <button onclick="adminDemo()">
+        Admin
+    </button>
+
+</footer>
+
+
+<!-- GAME WINDOW -->
+
+<div id="gameModal" class="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal('gameModal')"
+        >
+            ×
+        </button>
+
+        <h2 id="gameTitle">
+            Game
+        </h2>
+
+        <p id="gameDescription"></p>
+
+        <button
+            class="play-button"
+            onclick="startGame()"
+        >
+            ▶ Play inside ASAMH
+        </button>
+
+        <button
+            class="secondary-button"
+            onclick="rateGame()"
+        >
+            👍 Good
+        </button>
+
+        <button
+            class="secondary-button"
+            onclick="favoriteGame()"
+        >
+            ♥ Favorite
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div id="loginModal" class="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal('loginModal')"
+        >
+            ×
+        </button>
+
+        <h2>
+            ASAMH Account
+        </h2>
+
+        <input
+            id="username"
+            class="input"
+            placeholder="Choose username"
+        >
+
+        <button
+            class="play-button"
+            onclick="createAccount()"
+        >
+            Create demo account
+        </button>
+
+        <p class="demo">
+            Demo account only.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

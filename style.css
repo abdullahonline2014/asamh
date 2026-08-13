@@ -1,0 +1,834 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #070a13;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 30px;
+
+    background: rgba(7, 10, 19, 0.9);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid
+        #22283b;
+}
+
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 15px;
+
+    background: transparent;
+}
+
+
+nav button {
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+}
+
+
+nav button:hover {
+
+    background: #171c2c;
+}
+
+
+.right-menu {
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+}
+
+
+#search {
+
+    width: 200px;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #30374d;
+
+    background: #101526;
+
+    color: white;
+
+    outline: none;
+}
+
+
+/* HERO */
+
+.hero {
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 8%;
+
+
+    /*
+    IMPORTANT:
+
+    Put your background image in the same folder
+    and name it:
+
+    background.jpg
+
+    */
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(4, 7, 16, 0.96),
+            rgba(4, 7, 16, 0.60),
+            rgba(4, 7, 16, 0.20)
+        ),
+
+        url("background.jpg");
+
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+}
+
+
+.small-title {
+
+    color: #9da7c4;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: 0.95;
+
+    margin: 15px 0;
+}
+
+
+.hero-description {
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    color: #c4c9d9;
+
+    max-width: 550px;
+}
+
+
+/* BUTTONS */
+
+.play-button {
+
+    margin-top: 15px;
+
+    padding: 13px 22px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6748ff,
+            #a34cff
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(104, 72, 255, 0.3);
+}
+
+
+.play-button:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.1);
+}
+
+
+.small-button,
+.secondary-button,
+.plan-button {
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background: #151b2d;
+
+    border: 1px solid #293149;
+}
+
+
+.small-button:hover,
+.secondary-button:hover,
+.plan-button:hover {
+
+    background: #20283f;
+}
+
+
+/* SECTIONS */
+
+.section {
+
+    padding:
+        65px 8%;
+}
+
+
+.section h2 {
+
+    font-size: 34px;
+
+    margin-top: 8px;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 25px;
+}
+
+
+/* GAMES */
+
+.game-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.game-card {
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background: #101526;
+
+    border:
+        1px solid
+        #242c42;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.game-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color: #7659ff;
+}
+
+
+.game-image {
+
+    height: 160px;
+
+    display: flex;
+
+    align-items: end;
+
+    padding: 17px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #253875,
+            #793bb0
+        );
+}
+
+
+.game-image.racing {
+
+    background:
+        linear-gradient(
+            135deg,
+            #111c45,
+            #db4555
+        );
+}
+
+
+.game-image.puzzle {
+
+    background:
+        linear-gradient(
+            135deg,
+            #173f3a,
+            #6f9d40
+        );
+}
+
+
+.game-image.arcade {
+
+    background:
+        linear-gradient(
+            135deg,
+            #391b5b,
+            #d05291
+        );
+}
+
+
+.game-info {
+
+    padding: 15px;
+}
+
+
+.game-info h3 {
+
+    margin: 0 0 8px;
+}
+
+
+.game-info p {
+
+    margin: 0;
+
+    color: #8993ad;
+
+    font-size: 13px;
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 5px 8px;
+
+    border-radius: 7px;
+
+    background: #1c2440;
+
+    color: #c3cbed;
+
+    font-size: 11px;
+}
+
+
+/* CATEGORIES */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 13px;
+}
+
+
+.category-grid button {
+
+    padding: 25px 15px;
+
+    background: #101526;
+
+    border:
+        1px solid
+        #252d43;
+
+    border-radius: 15px;
+
+    font-size: 27px;
+
+    transition: 0.2s;
+}
+
+
+.category-grid button:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color: #7054ff;
+}
+
+
+.category-grid span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* LEADERBOARD */
+
+.leaderboard-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.player {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 18px 20px;
+
+    background: #101526;
+
+    border:
+        1px solid
+        #252d43;
+
+    border-radius: 13px;
+}
+
+
+.player small {
+
+    display: block;
+
+    color: #818ba5;
+
+    margin-top: 5px;
+}
+
+
+.player span {
+
+    color: #b8aaff;
+}
+
+
+/* MEMBERSHIP */
+
+.plans {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.plan {
+
+    position: relative;
+
+    padding: 28px;
+
+    background: #101526;
+
+    border:
+        1px solid
+        #282f45;
+
+    border-radius: 18px;
+}
+
+
+.plan.premium {
+
+    border-color: #7655ff;
+
+    box-shadow:
+        0 0 35px
+        rgba(112, 78, 255, 0.12);
+}
+
+
+.plan h3 {
+
+    font-size: 23px;
+}
+
+
+.price {
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    margin: 15px 0;
+}
+
+
+.price small {
+
+    color: #8790aa;
+
+    font-size: 14px;
+}
+
+
+.plan p {
+
+    color: #aeb5c8;
+
+    line-height: 1.5;
+
+    min-height: 65px;
+}
+
+
+.popular {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 18px;
+
+    background: #7655ff;
+
+    padding: 6px 8px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+.demo {
+
+    color: #737c96;
+
+    font-size: 12px;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    padding: 35px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    border-top:
+        1px solid
+        #22283a;
+
+    color: #8c95ad;
+}
+
+
+footer strong {
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+footer p {
+
+    margin: 5px 0 0;
+}
+
+
+footer button {
+
+    margin-left: auto;
+
+    color: #9ca6c0;
+}
+
+
+/* MODALS */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 200;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0, 0, 0, 0.75);
+}
+
+
+.modal.show {
+
+    display: flex;
+}
+
+
+.modal-box {
+
+    position: relative;
+
+    width: min(500px, 90%);
+
+    padding: 30px;
+
+    background: #101526;
+
+    border:
+        1px solid
+        #303952;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0, 0, 0, 0.7);
+}
+
+
+.close {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 12px;
+
+    font-size: 28px;
+
+    color: #9ca5bd;
+}
+
+
+.input {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 20px 0;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid
+        #303952;
+
+    background: #0b1020;
+
+    color: white;
+
+    outline: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+
+    nav {
+        display: none;
+    }
+
+    .game-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .plans {
+
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 0 15px;
+    }
+
+    .right-menu input {
+
+        display: none;
+    }
+
+    .hero {
+
+        min-height: 550px;
+
+        padding: 40px 22px;
+    }
+
+    .section {
+
+        padding: 45px 22px;
+    }
+
+    .game-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .player {
+
+        grid-template-columns:
+            1fr;
+    }
+}
+
