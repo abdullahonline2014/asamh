@@ -265,4 +265,3 @@ document
 
         displayGames(results);
     });
-
