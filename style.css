@@ -828,6 +828,149 @@ footer button {
     .player {
 
         grid-template-columns:
+
+
+
+
+
+
+
+/* =========================
+   COLOR RUSH
+========================= */
+
+.color-rush {
+    text-align: center;
+}
+
+.cr-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cr-stats div {
+    background: #0b1020;
+    border: 1px solid #293149;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.cr-stats span {
+    display: block;
+    color: #8993ad;
+    font-size: 12px;
+}
+
+.cr-stats strong {
+    display: block;
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.cr-target {
+    padding: 20px;
+    background: #0b1020;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.cr-target p {
+    color: #8993ad;
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.cr-target h1 {
+    margin: 10px 0 0;
+    font-size: 48px;
+}
+
+.cr-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.cr-color-button {
+    min-height: 70px;
+    border-radius: 14px;
+    font-weight: 900;
+    font-size: 17px;
+    color: white;
+    border: 3px solid rgba(255,255,255,0.15);
+    transition: 0.15s;
+}
+
+.cr-color-button:hover {
+    transform: scale(1.04);
+    filter: brightness(1.15);
+}
+
+.cr-color-button:active {
+    transform: scale(0.96);
+}
+
+.cr-message {
+    min-height: 25px;
+    margin-top: 18px;
+    color: #aab3c8;
+}
+
+.cr-message.correct {
+    color: #38d979;
+    font-weight: bold;
+}
+
+.cr-message.wrong {
+    color: #ff4d67;
+    font-weight: bold;
+}
+
+.color-rush-end {
+    text-align: center;
+    padding: 20px;
+}
+
+.end-icon {
+    font-size: 55px;
+}
+
+.color-rush-end h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.final-score {
+    display: block;
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.new-record {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 10px;
+    background: #33226e;
+    color: #c9b9ff;
+    font-weight: bold;
+    margin: 10px;
+}
+
+@media (max-width: 500px) {
+
+    .cr-target h1 {
+        font-size: 38px;
+    }
+
+    .cr-color-button {
+        min-height: 60px;
+        font-size: 14px;
+    }
+}
+            
             1fr;
     }
 }
